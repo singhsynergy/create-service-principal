@@ -21,7 +21,7 @@ Install and configure Azure CLI following the documentation [**HERE**](http://az
 ### 1.2 Login to Azure Account
 
 ```
-azure login 
+az login 
 ```
 
 >**NOTE:**
