@@ -10,15 +10,15 @@ A service principal contains the following credentials which will be mentioned i
 
 >**NOTE:** A service principal have two types: password-based and certificate-based. This topic only covers the password-based service principal.
 
-# 1 Create a Service Principal using Azure CLI
+# 1 Setup Azure CLI
 
 The easiest way to create the Service Principal is with the Azure CLI. You can [install Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) in the system of your preference.
 
-## 1.1 Install and Configure Azure CLI
+### 1.1 Install and Configure Azure CLI
 
 Install and configure Azure CLI following the documentation [**HERE**](http://azure.microsoft.com/en-us/documentation/articles/xplat-cli/).
 
-## 1.2 Login to Azure Account
+### 1.2 Login to Azure Account
 
 ```
 azure login 
