@@ -55,7 +55,7 @@ sh create-service-account.sh
 #### 2.2.1 Add Varibale Value
 ```
 pp_display_name="test-serviceprinciple"
-subscription_id="<Add your azure account subscripts>"
+subscription_id="<Add your azure account subscription>"
 ```
 #### 2.2.2 Create application in Azure APP Registration
 ```
