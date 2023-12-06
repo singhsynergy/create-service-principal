@@ -1,4 +1,4 @@
-# Create a Service Principal - Azure CLI
+# How to Create a Service Principal - Azure CLI
 
 This topic shows you how to permit a service principal (such as an automated Azure CLI login process) to access other resources in your subscription.
 
