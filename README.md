@@ -54,7 +54,7 @@ sh create-service-account.sh
 
 #### 2.2.1 Add Varibale Value
 ```
-pp_display_name="test-serviceprinciple"
+app_display_name="test-serviceprinciple"
 subscription_id="<Add your azure account subscription>"
 ```
 #### 2.2.2 Create application in Azure APP Registration
@@ -66,7 +66,7 @@ az ad app create --display-name "${app_display_name}"
 app_obj_id=$( \
   az ad app list \
     --display-name "${app_display_name}" \
-    --query [].objectId \
+    --query [].id \
     --output tsv
 )
 ```
@@ -92,7 +92,7 @@ az ad sp credential reset --name "${spn_app_id}"
 spn_obj_id=$( \
   az ad sp list \
     --display-name "${app_display_name}" \
-    --query [].objectId \
+    --query [].id \
     --output tsv
 )
 ```
@@ -101,7 +101,7 @@ spn_obj_id=$( \
 tenant_id=$( \
   az ad sp list \
     --display-name "${app_display_name}" \
-    --query [].appOwnerTenantId \
+    --query [].appOwnerOrganizationId \
     --output tsv
 )
 ```
