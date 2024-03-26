@@ -10,7 +10,7 @@ az ad app create --display-name "${app_display_name}"
 app_obj_id=$( \
   az ad app list \
     --display-name "${app_display_name}" \
-    --query [].objectId \
+    --query [].id \
     --output tsv
 )
 az ad sp create --id "${app_obj_id}"
@@ -24,13 +24,13 @@ az ad sp credential reset --name "${spn_app_id}"
 spn_obj_id=$( \
   az ad sp list \
     --display-name "${app_display_name}" \
-    --query [].objectId \
+    --query [].id \
     --output tsv
 )
 tenant_id=$( \
   az ad sp list \
     --display-name "${app_display_name}" \
-    --query [].appOwnerTenantId \
+    --query [].appOwnerOrganizationId \
     --output tsv
 )
 az role assignment create \
