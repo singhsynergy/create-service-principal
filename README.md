@@ -85,7 +85,7 @@ spn_app_id=$( \
 ```
 #### 2.2.6 Get the SP Credentials like(Object ID, Tenant ID and password)
 ```
-az ad sp credential reset --name "${spn_app_id}"
+az ad sp credential reset --id "${spn_app_id}"
 ```
 #### 2.2.7 Get the SP Object ID and save it in the Variable
 ```
