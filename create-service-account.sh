@@ -6,7 +6,7 @@ app_display_name="$app_display_name"
 subscription_id="$subscription_id"
 az login
 az account set -s "${subscription_id}"
-az ad app create --display-name "${app_display_name}" > Credentials.txt
+az ad app create --display-name "${app_display_name}"
 app_obj_id=$( \
   az ad app list \
     --display-name "${app_display_name}" \
@@ -20,7 +20,7 @@ spn_app_id=$( \
     --query [].appId \
     --output tsv
 )
-az ad sp credential reset --id "${spn_app_id}"
+az ad sp credential reset --id "${spn_app_id}"  > Credentials.txt
 spn_obj_id=$( \
   az ad sp list \
     --display-name "${app_display_name}" \
