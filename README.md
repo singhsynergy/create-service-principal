@@ -36,7 +36,7 @@ Azure CPI provisions resources in Azure using the Azure Resource Manager (ARM) A
 #### 2.1.1 Clone the Repository on your server
 ```
 apt install git 
-git clone git@github.com:jassi-devops/create-service-principal.git
+git clone git@github.com:singhsynergy/create-service-principal.git
 ```
 
 #### 2.1.2 Give the execute permission to Scipt create-service-account.sh
